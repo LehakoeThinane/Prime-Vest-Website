@@ -1,0 +1,28 @@
+# Env files (keep example files tracked)
+.env
+.env.local
+.env.*.local
+!*.env.example
+!.env.example
+
+# Python / Django
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/staticfiles/
+backend/venv/
+backend/.venv/
+*.sqlite3
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+frontend/npm-debug.log*
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
