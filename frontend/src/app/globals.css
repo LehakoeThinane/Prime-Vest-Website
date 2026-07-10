@@ -2,25 +2,72 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b1220;
+  --surface: #f6f7fb;
+  --surface-border: rgba(11, 18, 32, 0.1);
+  --muted: #5b6472;
+
+  --brand-navy-950: #060d1c;
+  --brand-navy-900: #0b1a33;
+  --brand-navy-800: #122446;
+  --brand-navy-700: #1a3260;
+  --brand-navy-600: #234280;
+  --brand-navy-500: #2f56a3;
+
+  --brand-gold-600: #a9791a;
+  --brand-gold-500: #c9982e;
+  --brand-gold-400: #d9b154;
+  --brand-gold-300: #e8cd8c;
+
+  --success: #1c7a4a;
+  --danger: #b3261e;
+
+  /* Validated against scripts/validate_palette.js for each surface (dataviz skill). */
+  --chart-line: #c9982e;
+  --chart-grid: rgba(11, 18, 32, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-muted: var(--muted);
+
+  --color-navy-950: var(--brand-navy-950);
+  --color-navy-900: var(--brand-navy-900);
+  --color-navy-800: var(--brand-navy-800);
+  --color-navy-700: var(--brand-navy-700);
+  --color-navy-600: var(--brand-navy-600);
+  --color-navy-500: var(--brand-navy-500);
+
+  --color-gold-600: var(--brand-gold-600);
+  --color-gold-500: var(--brand-gold-500);
+  --color-gold-400: var(--brand-gold-400);
+  --color-gold-300: var(--brand-gold-300);
+
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #060d1c;
+    --foreground: #eef1f6;
+    --surface: #0b1a33;
+    --surface-border: rgba(238, 241, 246, 0.1);
+    --muted: #9aa4b2;
+
+    --chart-line: #a9791a;
+    --chart-grid: rgba(238, 241, 246, 0.1);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
