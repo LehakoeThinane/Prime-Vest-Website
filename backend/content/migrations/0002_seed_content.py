@@ -53,7 +53,7 @@ FAQS = [
     {
         "category": "support",
         "question": "How can I contact support?",
-        "answer": "Use the live chat in your dashboard, WhatsApp us directly from the Contact page, or email our support team — we usually respond within a business day.",
+        "answer": "Use the live chat in your dashboard, WhatsApp us directly from the Contact page, or email our support team - we usually respond within a business day.",
         "order": 1,
     },
 ]
@@ -94,7 +94,7 @@ MILESTONES = [
 ]
 
 TESTIMONIALS = [
-    {"name": "Nomvula Khumalo", "role": "Property Investor", "quote": "Prime Vest made property investing accessible — clear returns, transparent reporting, and real support when I needed it.", "rating": 5},
+    {"name": "Nomvula Khumalo", "role": "Property Investor", "quote": "Prime Vest made property investing accessible - clear returns, transparent reporting, and real support when I needed it.", "rating": 5},
     {"name": "James Botha", "role": "Portfolio Client", "quote": "The managed portfolio has consistently outperformed my expectations. My advisor actually knows my goals.", "rating": 5},
     {"name": "Lerato Mahlangu", "role": "Business Owner", "quote": "The business funding solution helped us scale without giving up control of our company.", "rating": 5},
 ]
@@ -103,7 +103,7 @@ BLOG_POSTS = [
     {
         "title": "5 Fundamentals of Smart Property Investing",
         "slug": "5-fundamentals-of-smart-property-investing",
-        "excerpt": "What separates a good property investment from a great one — and how Prime Vest evaluates every deal.",
+        "excerpt": "What separates a good property investment from a great one - and how Prime Vest evaluates every deal.",
         "body": "Property remains one of the most reliable wealth-building tools available to investors. In this article we break down the five fundamentals our team evaluates on every deal: location, cash flow, tenant quality, exit liquidity, and macro timing.\n\nLocation continues to dominate long-term appreciation, but cash flow discipline is what protects investors during downturns. We also look closely at tenant quality and lease structure, since consistent rental income is the backbone of any property fund's returns.",
         "category": "property_markets",
         "author_name": "Prime Vest Research Team",
@@ -119,7 +119,7 @@ BLOG_POSTS = [
     {
         "title": "Understanding Investment Risk Profiles",
         "slug": "understanding-investment-risk-profiles",
-        "excerpt": "Conservative, balanced, or aggressive — what these risk profiles actually mean for your returns.",
+        "excerpt": "Conservative, balanced, or aggressive - what these risk profiles actually mean for your returns.",
         "body": "Every investor has a different tolerance for volatility. This guide explains the difference between conservative, balanced, and aggressive risk profiles, and how to choose the one that matches your financial goals and time horizon.",
         "category": "financial_education",
         "author_name": "Prime Vest Research Team",
@@ -128,7 +128,7 @@ BLOG_POSTS = [
         "title": "Prime Vest Market Outlook: What to Watch This Quarter",
         "slug": "prime-vest-market-outlook-this-quarter",
         "excerpt": "Our investment team's take on interest rates, property markets, and where opportunity is emerging.",
-        "body": "Interest rate movements continue to shape both property and equity markets this quarter. Our investment committee shares its outlook on where we see resilience — and where investors should stay cautious — across the products on our platform.",
+        "body": "Interest rate movements continue to shape both property and equity markets this quarter. Our investment committee shares its outlook on where we see resilience - and where investors should stay cautious - across the products on our platform.",
         "category": "market_insight",
         "author_name": "Prime Vest Investment Committee",
     },

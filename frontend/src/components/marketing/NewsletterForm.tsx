@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useState } from "react";
 import { subscribeToNewsletter } from "@/lib/api";
@@ -20,7 +20,7 @@ export function NewsletterForm() {
   }
 
   if (status === "done") {
-    return <p className="text-sm text-gold-400">You&apos;re subscribed — thanks for joining.</p>;
+    return <p className="text-sm text-gold-400">You&apos;re subscribed - thanks for joining.</p>;
   }
 
   return (
@@ -37,7 +37,7 @@ export function NewsletterForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="shrink-0 rounded-md bg-gold-500 px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-gold-400 disabled:opacity-50"
+          className="shrink-0 rounded-md bg-gold-500 px-4 py-2 text-sm font-semibold text-green-950 hover:bg-gold-400 disabled:opacity-50"
         >
           {status === "loading" ? "..." : "Subscribe"}
         </button>

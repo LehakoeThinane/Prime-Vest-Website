@@ -1,4 +1,4 @@
-import { ShieldCheck, TrendingUp, Users, Wallet } from "lucide-react";
+﻿import { ShieldCheck, TrendingUp, Users, Wallet } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
@@ -45,7 +45,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-navy-950 text-white">
+      <section className="relative overflow-hidden bg-green-950 text-white">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(201,152,46,0.18),_transparent_55%)]" />
         <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gold-400">
@@ -69,7 +69,7 @@ export default async function HomePage() {
       <Section tone="surface">
         <SectionHeading
           eyebrow="Investment highlights"
-          title="Six ways to grow your wealth with Prime Vest"
+          title="Many ways to grow your wealth with Prime Vest"
           description="From property to business funding, choose the products that fit your goals and risk profile."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -125,13 +125,13 @@ export default async function HomePage() {
         </Section>
       )}
 
-      <Section tone="navy">
+      <Section tone="green">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
               eyebrow="Get in touch"
               title="Ready to start building wealth?"
-              description="Speak to an investment advisor or reach out with any questions — we usually respond within a business day."
+              description="Speak to an investment advisor or reach out with any questions - we usually respond within a business day."
             />
             <div className="flex flex-wrap gap-4">
               <ButtonLink href="/contact">Contact Us</ButtonLink>

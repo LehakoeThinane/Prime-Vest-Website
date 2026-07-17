@@ -1,9 +1,10 @@
-import { Briefcase, Building2, LineChart, PiggyBank, Rocket, Users } from "lucide-react";
+import { ArrowLeftRight, Briefcase, Building2, LineChart, PiggyBank, Rocket, Users } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import type { InvestmentProduct } from "@/lib/types";
 
 export const categoryIcons: Record<InvestmentProduct["category"], typeof Building2> = {
   property: Building2,
+  forex: ArrowLeftRight,
   portfolio: LineChart,
   wealth: PiggyBank,
   advisory: Users,
@@ -28,7 +29,9 @@ export function ProductCard({ product, id }: { product: InvestmentProduct; id?: 
         </div>
         <div>
           <dt className="text-xs text-muted">Expected return</dt>
-          <dd className="font-semibold">{product.expected_return_rate}% p.a.</dd>
+          <dd className="font-semibold">
+            {Number(product.expected_return_rate) > 0 ? `${product.expected_return_rate}% p.a.` : "Variable"}
+          </dd>
         </div>
       </dl>
     </Card>

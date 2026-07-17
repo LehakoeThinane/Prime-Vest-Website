@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
@@ -55,7 +55,7 @@ export function ChatWidget() {
     <div className="fixed bottom-6 right-6 z-40">
       {open && (
         <div className="mb-3 flex h-96 w-80 flex-col overflow-hidden rounded-xl border border-surface-border bg-background shadow-2xl">
-          <div className="flex items-center justify-between border-b border-surface-border bg-navy-950 px-4 py-3 text-white">
+          <div className="flex items-center justify-between border-b border-surface-border bg-green-950 px-4 py-3 text-white">
             <p className="text-sm font-semibold">Prime Vest Support</p>
             <button aria-label="Close chat" onClick={() => setOpen(false)}>
               <X size={18} />
@@ -72,7 +72,7 @@ export function ChatWidget() {
                 key={m.id}
                 className={`max-w-[85%] rounded-lg px-3 py-2 text-sm ${
                   m.sender_role === "investor"
-                    ? "ml-auto bg-gold-500 text-navy-950"
+                    ? "ml-auto bg-gold-500 text-green-950"
                     : "bg-surface text-foreground"
                 }`}
               >
@@ -91,7 +91,7 @@ export function ChatWidget() {
               type="submit"
               disabled={sending}
               aria-label="Send message"
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-gold-500 text-navy-950 disabled:opacity-50"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-gold-500 text-green-950 disabled:opacity-50"
             >
               <Send size={16} />
             </button>
@@ -102,7 +102,7 @@ export function ChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle support chat"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-navy-900 text-white shadow-lg transition-transform hover:scale-105"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-green-900 text-white shadow-lg transition-transform hover:scale-105"
       >
         {open ? <X size={24} /> : <MessageCircle size={24} />}
       </button>

@@ -1,23 +1,26 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
 import { categoryIcons } from "@/components/marketing/ProductCard";
+import { ReturnsTable } from "@/components/marketing/ReturnsTable";
+import { ForexTierTable } from "@/components/marketing/ForexTierTable";
 import { getInvestmentProducts } from "@/lib/server-api";
 
 export const metadata: Metadata = {
   title: "Investment Services",
   description:
-    "Explore Prime Vest's investment services: Property Investments, Portfolio Management, Wealth Building, Investment Advisory, Business Funding Solutions, and Future Opportunities.",
+    "Explore Prime Vest's investment services: Property Investments, Forex Trading Accounts, Portfolio Management, Wealth Building, Investment Advisory, Business Funding Solutions, and Future Opportunities.",
 };
 
 const categoryOrder: Record<string, number> = {
   property: 1,
-  portfolio: 2,
-  wealth: 3,
-  advisory: 4,
-  business_funding: 5,
-  future: 6,
+  forex: 2,
+  portfolio: 3,
+  wealth: 4,
+  advisory: 5,
+  business_funding: 6,
+  future: 7,
 };
 
 export default async function ServicesPage() {
@@ -69,21 +72,54 @@ export default async function ServicesPage() {
                     R{Number(product.min_amount).toLocaleString()}
                   </dd>
                 </div>
-                <div className="rounded-xl border border-surface-border p-5">
-                  <dt className="text-xs text-muted">Expected annual return</dt>
-                  <dd className="mt-1 text-xl font-semibold">{product.expected_return_rate}%</dd>
-                </div>
-                <div className="col-span-2 rounded-xl border border-surface-border p-5">
-                  <dt className="text-xs text-muted">Term</dt>
-                  <dd className="mt-1 text-xl font-semibold">{product.term_months} months</dd>
-                </div>
+                {product.category === "forex" ? (
+                  <>
+                    <div className="rounded-xl border border-surface-border p-5">
+                      <dt className="text-xs text-muted">Return model</dt>
+                      <dd className="mt-1 text-xl font-semibold">Profit-split</dd>
+                    </div>
+                    <div className="col-span-2 rounded-xl border border-surface-border p-5">
+                      <dt className="text-xs text-muted">Account type</dt>
+                      <dd className="mt-1 text-xl font-semibold">Rolling monthly</dd>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="rounded-xl border border-surface-border p-5">
+                      <dt className="text-xs text-muted">Expected annual return</dt>
+                      <dd className="mt-1 text-xl font-semibold">{product.expected_return_rate}%</dd>
+                    </div>
+                    <div className="col-span-2 rounded-xl border border-surface-border p-5">
+                      <dt className="text-xs text-muted">Term</dt>
+                      <dd className="mt-1 text-xl font-semibold">{product.term_months} months</dd>
+                    </div>
+                  </>
+                )}
               </dl>
             </div>
+
+            {product.category === "forex" && (
+              <div className="mt-10">
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-500">
+                  Account tiers
+                </h3>
+                <ForexTierTable />
+              </div>
+            )}
+
+            {Number(product.expected_return_rate) > 0 && (
+              <div className="mt-10">
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-500">
+                  Projected returns
+                </h3>
+                <ReturnsTable product={product} />
+              </div>
+            )}
           </Section>
         );
       })}
 
-      <Section tone="navy">
+      <Section tone="green">
         <div className="text-center">
           <SectionHeading
             eyebrow="Not sure where to start?"

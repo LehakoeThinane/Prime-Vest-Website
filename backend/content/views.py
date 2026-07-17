@@ -93,7 +93,7 @@ class ContactMessageCreateView(generics.CreateAPIView):
             body=f"From: {message.name} <{message.email}>\nPhone: {message.phone}\n\n{message.message}",
         )
         send_email(
-            subject="We received your message — Prime Vest",
+            subject="We received your message - Prime Vest",
             to=message.email,
             body=f"Hi {message.name},\n\nThanks for reaching out. Our team will respond shortly.\n\nThe Prime Vest Team",
         )
@@ -112,7 +112,7 @@ class NewsletterSubscribeView(generics.CreateAPIView):
             send_email(
                 subject="You're subscribed to Prime Vest insights",
                 to=email,
-                body="Thanks for subscribing — you'll now receive our investing and market insight updates.",
+                body="Thanks for subscribing - you'll now receive our investing and market insight updates.",
             )
         return Response({"email": email, "subscribed": True}, status=201)
 

@@ -9,7 +9,7 @@ def send_welcome_email(user):
         to=user.email,
         body=(
             f"Hi {user.first_name or user.email},\n\n"
-            "Welcome to Prime Vest. Your account has been created — verify your "
+            "Welcome to Prime Vest. Your account has been created - verify your "
             "profile from your dashboard to start investing.\n\n"
             "The Prime Vest Team"
         ),

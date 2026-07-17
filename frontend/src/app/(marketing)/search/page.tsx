@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, Suspense, useEffect, useState } from "react";
 import Link from "next/link";
@@ -51,7 +51,7 @@ function SearchResultsView() {
             className="w-full rounded-md border border-surface-border bg-transparent py-2 pl-9 pr-3 text-sm focus:border-gold-500 focus:outline-none"
           />
         </div>
-        <button type="submit" className="rounded-md bg-gold-500 px-4 py-2 text-sm font-semibold text-navy-950">
+        <button type="submit" className="rounded-md bg-gold-500 px-4 py-2 text-sm font-semibold text-green-950">
           Search
         </button>
       </form>

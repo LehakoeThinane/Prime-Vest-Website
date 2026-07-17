@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
 import { NewsletterForm } from "./NewsletterForm";
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "./SocialIcons";
@@ -32,7 +32,7 @@ export function Footer({ settings }: { settings: SiteSettings }) {
   ].filter((s) => s.href);
 
   return (
-    <footer className="mt-24 border-t border-white/10 bg-navy-950 text-white">
+    <footer className="mt-24 border-t border-white/10 bg-green-950 text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <p className="text-lg font-bold">

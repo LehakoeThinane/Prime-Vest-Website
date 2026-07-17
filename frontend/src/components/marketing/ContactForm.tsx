@@ -29,7 +29,7 @@ export function ContactForm() {
   if (status === "done") {
     return (
       <div className="rounded-xl border border-surface-border bg-surface/60 p-6 text-sm">
-        Thanks for reaching out — our team will respond shortly.
+        Thanks for reaching out - our team will respond shortly.
       </div>
     );
   }

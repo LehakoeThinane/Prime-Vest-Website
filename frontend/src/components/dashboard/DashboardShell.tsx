@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -156,7 +156,7 @@ function DashboardNav({
               href={item.href}
               onClick={onNavigate}
               className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium ${
-                active ? "bg-gold-500 text-navy-950" : "text-muted hover:bg-surface hover:text-foreground"
+                active ? "bg-gold-500 text-green-950" : "text-muted hover:bg-surface hover:text-foreground"
               }`}
             >
               <Icon size={18} />

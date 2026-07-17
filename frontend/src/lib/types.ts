@@ -65,7 +65,7 @@ export type FAQ = {
 
 export type InvestmentProduct = {
   id: number;
-  category: "property" | "portfolio" | "wealth" | "advisory" | "business_funding" | "future";
+  category: "property" | "forex" | "portfolio" | "wealth" | "advisory" | "business_funding" | "future";
   name: string;
   slug: string;
   summary: string;

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+﻿import { ReactNode } from "react";
 import { Container } from "./Container";
 
 export function Section({
@@ -10,13 +10,13 @@ export function Section({
   children: ReactNode;
   className?: string;
   id?: string;
-  tone?: "default" | "surface" | "navy";
+  tone?: "default" | "surface" | "green";
 }) {
   const toneClass =
     tone === "surface"
       ? "bg-surface"
-      : tone === "navy"
-        ? "bg-navy-950 text-white"
+      : tone === "green"
+        ? "bg-green-950 text-white"
         : "";
 
   return (
