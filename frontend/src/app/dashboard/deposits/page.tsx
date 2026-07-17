@@ -60,7 +60,7 @@ export default function DepositsPage() {
         return;
       }
       await createDeposit(amount, method, notes);
-      setMessage("Deposit submitted — it will be confirmed once processed.");
+      setMessage("Deposit submitted - it will be confirmed once processed.");
       setAmount("");
       setNotes("");
       loadDeposits();

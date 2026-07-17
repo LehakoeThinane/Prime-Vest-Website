@@ -7,6 +7,7 @@ from django.utils import timezone
 class InvestmentProduct(models.Model):
     class Category(models.TextChoices):
         PROPERTY = "property", "Property Investments"
+        FOREX = "forex", "Forex Trading Accounts"
         PORTFOLIO = "portfolio", "Portfolio Management"
         WEALTH = "wealth", "Wealth Building"
         ADVISORY = "advisory", "Investment Advisory"

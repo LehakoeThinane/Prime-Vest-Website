@@ -56,7 +56,7 @@ export default function ProfilePage() {
         <span className="text-sm font-medium">Verification status:</span>
         <StatusBadge status={profile.profile.verification_status} />
         {profile.profile.verification_status === "rejected" && profile.profile.verification_notes && (
-          <span className="text-sm text-muted">— {profile.profile.verification_notes}</span>
+          <span className="text-sm text-muted">- {profile.profile.verification_notes}</span>
         )}
       </div>
 

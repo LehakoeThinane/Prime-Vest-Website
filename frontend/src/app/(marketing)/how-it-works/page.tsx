@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { BadgeCheck, LineChart, PiggyBank, TrendingUp, UserPlus, Wallet } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
         </div>
       </Section>
 
-      <Section tone="navy" className="text-center">
+      <Section tone="green" className="text-center">
         <SectionHeading eyebrow="Ready?" title="Start your investment journey today" align="center" />
         <ButtonLink href="/register">Invest Now</ButtonLink>
       </Section>

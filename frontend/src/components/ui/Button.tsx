@@ -1,12 +1,12 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-gold-500 text-navy-950 hover:bg-gold-400",
-  secondary: "bg-navy-900 text-white hover:bg-navy-800",
+  primary: "bg-gold-500 text-green-950 hover:bg-gold-400",
+  secondary: "bg-green-900 text-white hover:bg-green-800",
   ghost: "border border-surface-border bg-transparent hover:bg-surface",
 };
 

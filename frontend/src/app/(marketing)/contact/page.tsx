@@ -6,7 +6,7 @@ import { getSiteSettings } from "@/lib/server-api";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Prime Vest — contact form, WhatsApp, email, phone, and office address.",
+  description: "Get in touch with Prime Vest - contact form, WhatsApp, email, phone, and office address.",
 };
 
 export default async function ContactPage() {
@@ -18,7 +18,7 @@ export default async function ContactPage() {
       <SectionHeading
         eyebrow="Contact Us"
         title="We'd love to hear from you"
-        description="Reach out with questions about investing, your account, or anything else — our team typically responds within a business day."
+        description="Reach out with questions about investing, your account, or anything else - our team typically responds within a business day."
       />
 
       <div className="grid gap-10 lg:grid-cols-5">

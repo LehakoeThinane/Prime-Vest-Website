@@ -18,7 +18,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Prime Vest — Building Wealth Through Smart Investments",
+    default: "Prime Vest - Building Wealth Through Smart Investments",
     template: "%s | Prime Vest",
   },
   description:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Prime Vest",
-    title: "Prime Vest — Building Wealth Through Smart Investments",
+    title: "Prime Vest - Building Wealth Through Smart Investments",
     description:
       "Trusted investment partner for property, portfolio management, wealth building, advisory, and business funding.",
   },

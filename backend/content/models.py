@@ -68,7 +68,7 @@ class Milestone(models.Model):
         ordering = ["year", "order"]
 
     def __str__(self):
-        return f"{self.year} — {self.title}"
+        return f"{self.year} - {self.title}"
 
 
 class FAQ(models.Model):

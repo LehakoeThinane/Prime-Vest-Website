@@ -47,7 +47,7 @@ export default function AdminOverviewPage() {
 
       <h2 className="mb-4 text-lg font-semibold">Manage</h2>
       <p className="mb-4 text-sm text-muted">
-        Full management tools live in the Django admin — approve investors, publish content, review
+        Full management tools live in the Django admin - approve investors, publish content, review
         transactions, send announcements, and generate CSV reports.
       </p>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

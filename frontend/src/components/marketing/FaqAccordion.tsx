@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
@@ -44,7 +44,7 @@ export function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setCategory("all")}
-            className={`rounded-full px-3 py-1.5 text-xs font-medium ${category === "all" ? "bg-gold-500 text-navy-950" : "border border-surface-border text-muted"}`}
+            className={`rounded-full px-3 py-1.5 text-xs font-medium ${category === "all" ? "bg-gold-500 text-green-950" : "border border-surface-border text-muted"}`}
           >
             All
           </button>
@@ -52,7 +52,7 @@ export function FaqAccordion({ faqs }: { faqs: FAQ[] }) {
             <button
               key={c}
               onClick={() => setCategory(c)}
-              className={`rounded-full px-3 py-1.5 text-xs font-medium ${category === c ? "bg-gold-500 text-navy-950" : "border border-surface-border text-muted"}`}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium ${category === c ? "bg-gold-500 text-green-950" : "border border-surface-border text-muted"}`}
             >
               {categoryLabels[c]}
             </button>

@@ -42,7 +42,7 @@ export function PortfolioChart({ snapshots }: { snapshots: Snapshot[] }) {
   if (snapshots.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-surface-border p-8 text-center text-sm text-muted">
-        No portfolio history yet — your first deposit or investment will start your performance chart.
+        No portfolio history yet - your first deposit or investment will start your performance chart.
       </div>
     );
   }

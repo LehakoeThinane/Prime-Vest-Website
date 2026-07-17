@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Compass, HeartHandshake, ShieldCheck, Sparkles, Target } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
@@ -26,7 +26,7 @@ export default async function AboutPage() {
         <SectionHeading
           eyebrow="About Prime Vest"
           title="A trusted partner in building lasting wealth"
-          description="Prime Vest was founded on a simple idea: everyday investors deserve access to the same quality investment opportunities as institutions — with full transparency and hands-on support."
+          description="Prime Vest was founded on a simple idea: everyday investors deserve access to the same quality investment opportunities as institutions - with full transparency and hands-on support."
         />
       </Section>
 
@@ -39,7 +39,7 @@ export default async function AboutPage() {
               Prime Vest started in 2018 with a single property fund and a handful of early
               investors who believed in a more transparent way to invest. Since then, we&apos;ve
               grown into a full-service investment platform spanning property, managed
-              portfolios, wealth building, advisory, and business funding — while staying true
+              portfolios, wealth building, advisory, and business funding - while staying true
               to the principle that every investor deserves clear reporting and honest advice.
             </p>
           </Card>
@@ -47,7 +47,7 @@ export default async function AboutPage() {
             <Target className="text-gold-500" size={24} />
             <h3 className="mt-4 text-lg font-semibold">Our Vision</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              To be the most trusted investment partner in the region — the first name investors
+              To be the most trusted investment partner in the region - the first name investors
               think of when they&apos;re ready to grow their wealth.
             </p>
             <h3 className="mt-6 text-lg font-semibold">Our Mission</h3>
@@ -80,7 +80,7 @@ export default async function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (
               <Card key={member.id} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy-900 text-lg font-semibold text-gold-400">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-900 text-lg font-semibold text-gold-400">
                   {member.name
                     .split(" ")
                     .map((n) => n[0])

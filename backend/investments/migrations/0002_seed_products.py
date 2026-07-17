@@ -60,7 +60,7 @@ PRODUCTS = [
         "slug": "business-growth-funding",
         "summary": "Debt and equity funding solutions for growing businesses.",
         "description": (
-            "Flexible funding — from working capital to growth equity — for established "
+            "Flexible funding - from working capital to growth equity - for established "
             "businesses looking to expand, paired with investor returns tied to performance."
         ),
         "min_amount": "10000.00",
@@ -73,8 +73,8 @@ PRODUCTS = [
         "slug": "future-opportunities-fund",
         "summary": "Early access to upcoming investment opportunities as they launch.",
         "description": (
-            "Register your interest to get priority access to new investment products — "
-            "renewable energy, private equity, and international markets — as they open."
+            "Register your interest to get priority access to new investment products - "
+            "renewable energy, private equity, and international markets - as they open."
         ),
         "min_amount": "1000.00",
         "expected_return_rate": "0.00",

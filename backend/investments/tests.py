@@ -14,7 +14,7 @@ class InvestmentProductTests(APITestCase):
     def test_product_list_is_public_and_seeded(self):
         response = self.client.get(reverse("investment-products"))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 6)
+        self.assertEqual(len(response.data), 7)
 
 
 class InvestmentCreationTests(APITestCase):

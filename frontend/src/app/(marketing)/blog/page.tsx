@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { BlogCard } from "@/components/marketing/BlogCard";
@@ -41,7 +41,7 @@ export default async function BlogPage({
             href={c.value ? `/blog?category=${c.value}` : "/blog"}
             className={`rounded-full px-3 py-1.5 text-xs font-medium ${
               (category ?? "") === c.value
-                ? "bg-gold-500 text-navy-950"
+                ? "bg-gold-500 text-green-950"
                 : "border border-surface-border text-muted"
             }`}
           >
