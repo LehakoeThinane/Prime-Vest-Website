@@ -81,11 +81,17 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "static/"
+STATIC_URL = env("DJANGO_STATIC_URL", default="static/")
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-MEDIA_URL = "media/"
+MEDIA_URL = env("DJANGO_MEDIA_URL", default="media/")
 MEDIA_ROOT = BASE_DIR / "media"
+
+# Every API route is built with this prefix (see config/urls.py). Locally/in Docker the Django
+# server is its own origin, so routes need the "api/" prefix. On cPanel, the Python app is mounted
+# by Passenger at a /api base URI, which already strips that segment before Django sees the
+# request — so DJANGO_API_URL_PREFIX is set to empty there.
+API_URL_PREFIX = env("DJANGO_API_URL_PREFIX", default="api/")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

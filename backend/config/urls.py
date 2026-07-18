@@ -5,17 +5,20 @@ from django.urls import include, path
 
 from core.views import AdminStatsView
 
+PREFIX = settings.API_URL_PREFIX
+
 urlpatterns = [
+    # Declared before "admin/" so it isn't swallowed by admin.site.urls when PREFIX is empty.
+    path(f"{PREFIX}admin/stats/", AdminStatsView.as_view(), name="admin-stats"),
     path("admin/", admin.site.urls),
-    path("api/health/", include("core.urls")),
-    path("api/auth/", include("users.urls")),
-    path("api/investments/", include("investments.urls")),
-    path("api/transactions/", include("transactions.urls")),
-    path("api/payments/", include("payments.urls")),
-    path("api/content/", include("content.urls")),
-    path("api/notifications/", include("notifications.urls")),
-    path("api/chat/", include("chat.urls")),
-    path("api/admin/stats/", AdminStatsView.as_view(), name="admin-stats"),
+    path(f"{PREFIX}health/", include("core.urls")),
+    path(f"{PREFIX}auth/", include("users.urls")),
+    path(f"{PREFIX}investments/", include("investments.urls")),
+    path(f"{PREFIX}transactions/", include("transactions.urls")),
+    path(f"{PREFIX}payments/", include("payments.urls")),
+    path(f"{PREFIX}content/", include("content.urls")),
+    path(f"{PREFIX}notifications/", include("notifications.urls")),
+    path(f"{PREFIX}chat/", include("chat.urls")),
 ]
 
 if settings.DEBUG:
