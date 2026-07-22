@@ -67,6 +67,12 @@ DATABASES = {
     "default": env.db("DATABASE_URL"),
 }
 
+# Some shared hosts (e.g. cPanel/CageFS) only expose Postgres over a Unix socket in a
+# non-default directory rather than over TCP, which a DATABASE_URL can't express cleanly.
+# When set, this overrides the parsed host with that socket directory.
+if env("DB_UNIX_SOCKET_DIR", default=""):
+    DATABASES["default"]["HOST"] = env("DB_UNIX_SOCKET_DIR")
+
 AUTH_USER_MODEL = "users.User"
 
 AUTH_PASSWORD_VALIDATORS = [
