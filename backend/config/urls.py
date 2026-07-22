@@ -21,5 +21,6 @@ urlpatterns = [
     path(f"{PREFIX}chat/", include("chat.urls")),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Served directly by Django rather than gated behind DEBUG: this deployment has no
+# separate web-server-level static/media mapping or cloud storage in front of it.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
