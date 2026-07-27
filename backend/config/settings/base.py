@@ -82,7 +82,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = env("DJANGO_STATIC_URL", default="static/")
+STATIC_URL = env("DJANGO_STATIC_URL", default="/static/")
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STORAGES = {
@@ -90,8 +90,23 @@ STORAGES = {
     "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
 }
 
-MEDIA_URL = env("DJANGO_MEDIA_URL", default="media/")
+MEDIA_URL = env("DJANGO_MEDIA_URL", default="/media/")
 MEDIA_ROOT = BASE_DIR / "media"
+
+# On hosts with an ephemeral filesystem (e.g. Render's free tier), local disk storage for
+# user-uploaded media doesn't survive a redeploy. When set, this switches media storage to an
+# S3-compatible bucket (e.g. Supabase Storage) instead. Unset in local/Docker/CI, which keep
+# using plain FileSystemStorage above.
+if env("SUPABASE_S3_BUCKET", default=""):
+    STORAGES["default"] = {"BACKEND": "storages.backends.s3boto3.S3Boto3Storage"}
+    AWS_ACCESS_KEY_ID = env("SUPABASE_S3_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = env("SUPABASE_S3_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = env("SUPABASE_S3_BUCKET")
+    AWS_S3_ENDPOINT_URL = env("SUPABASE_S3_ENDPOINT_URL")
+    AWS_S3_REGION_NAME = env("SUPABASE_S3_REGION", default="us-east-1")
+    AWS_S3_ADDRESSING_STYLE = "path"
+    AWS_DEFAULT_ACL = None
+    AWS_QUERYSTRING_AUTH = False
 
 # Every API route is built with this prefix (see config/urls.py). Locally/in Docker the Django
 # server is its own origin, so routes need the "api/" prefix. On cPanel, the Python app is mounted
